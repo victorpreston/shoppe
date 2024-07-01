@@ -1,0 +1,23 @@
+### Add product to cart (requires User token)
+POST http://localhost:3000/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+{
+    "productId": 5,
+    "quantity": 9
+}
+
+### Get user cart (requires User token)
+GET http://localhost:3000/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+
+### Remove product from cart (requires User token)
+DELETE http://localhost:3000/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+{
+    "productId": 8
+}

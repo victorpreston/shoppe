@@ -1,0 +1,75 @@
+### Create a new product (requires Admin token)
+POST http://localhost:3000/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzYxNzkxLCJleHAiOjE3MTk3NjUzOTF9.18a09lDjL6DLTMA-wPY-RwVvYbqeKNBZluTlTGw9S_o
+
+{
+    "name": "Product 3 Test",
+    "description": "This is a third test product",
+    "price": 100.99,
+    "image": "http://example.com/image.jpg",
+    "stockQuantity": 30,
+    "categoryId": 1
+}
+
+### Get all products
+GET http://localhost:3000/products
+
+### Get a specific product
+GET http://localhost:3000/products/5
+
+### Update a product (requires Admin token)
+PUT http://localhost:3000/products/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzQ4MTExLCJleHAiOjE3MTk3NTE3MTF9.8nMzktaB6G79yZjWm0hibcnwMEQOBGs1ldwZmB-DQGk
+
+{
+    "id": 5,
+    "name": "Updated Product",
+    "description": "This is an updated product",
+    "price": 70.99,
+    "image": "http://example.com/newimage.jpg",
+    "stockQuantity": 50,
+    "categoryId": 1
+}
+
+### Delete a product (requires Admin token)
+DELETE http://localhost:3000/products/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzQ4MTExLCJleHAiOjE3MTk3NTE3MTF9.8nMzktaB6G79yZjWm0hibcnwMEQOBGs1ldwZmB-DQGk
+
+
+
+
+
+# ### Create a new product with image (requires Admin token)
+# POST http://localhost:3000/products
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzYwMzI5LCJleHAiOjE3MTk3NjM5Mjl9.1l7NMF1xp19zF4rQOgEXf89y_mClYBCWAxZGrd-Rfgk
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="name"
+
+# Test Product Upload
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="description"
+
+# This is a product tests image upload.
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="price"
+
+# 109.99
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="stockQuantity"
+
+# 7
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="categoryId"
+
+# 1
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="image"; filename="test_image.jpg"
+# Content-Type: image/jpeg
+
+# <image content>
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+

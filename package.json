@@ -1,0 +1,15 @@
+{
+  "name": "shoppie",
+  "version": "1.0.0",
+  "description": "Shoppie E-Commerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Shoppie",
+    "Shoppy"
+  ],
+  "author": "[Marvin, Charity, Victor]-group project",
+  "license": "ISC"
+}

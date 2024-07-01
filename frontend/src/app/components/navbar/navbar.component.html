@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <!-- <div class="navbar-brand">Shoppie Mall</div> -->
+  <div class="navbar-brand">
+    <img src="https://storage.googleapis.com/apptodownload/sm.png" alt="Shoppie Mall Logo">
+  </div>
+  <div class="navbar-menu">
+    <button class="navbar-item"><fa-icon [icon]="['fas', 'home']" class="fa-home"></fa-icon></button>
+    <button class="navbar-item">About Us</button>
+    <button class="navbar-item">Contact</button>
+    <button class="navbar-item">Sign In</button>
+    <button class="navbar-item">Sign Up</button>
+  </div>
+  <div class="navbar-right">
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Search...">
+      <fa-icon class="search-icon" [icon]="['fas', 'search']" (click)="handleSearch()"></fa-icon>
+    </div>
+    <!-- <fa-icon [icon]="['fas', 'heart']"></fa-icon> -->
+    <fa-icon [icon]="['fas', 'shopping-cart']" class="fa-shopping-cart"></fa-icon>
+  </div>
+</nav>

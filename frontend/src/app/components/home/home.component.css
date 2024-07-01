@@ -1,0 +1,86 @@
+.main{
+
+}
+
+.sidebar {
+  position: fixed;
+  margin-top: 60px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: white;
+  padding: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.category-bar {
+  margin-top: 20px; 
+}
+
+.category-item {
+  background: white;
+  border: none;
+  color: #333;
+  margin: 5px 0;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-item:hover {
+  background-color: #E83544;
+  color: #FFF5E1;
+}
+
+.category-item i {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.category-item span {
+  font-size: 0.9em;
+}
+
+
+.voucher-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.voucher-content {
+  text-align: left;
+  margin-bottom: 50vh;
+  margin-right: 50vw;
+  border-radius: 5px;
+}
+
+.voucher-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.timer {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #E83544;
+}
+
+.fa-shopping-cart {
+  color: #E83544; /* Set the cart icon color */
+}
+

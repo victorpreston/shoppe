@@ -1,0 +1,23 @@
+### Create a new order (requires User token)
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+
+### Cancel an order (requires User token)
+DELETE http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+{
+    "orderId": 2
+}
+
+
+### Get orders for a regular user
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+
+### Get orders for an admin user
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzUyODE5LCJleHAiOjE3MTk3NTY0MTl9.iOqDrvJPRrJXrYoLUwZRLoPu4Vz5jnoW5bcyaJheask

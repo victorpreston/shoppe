@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="main">
+    <div class="sidebar">
+        <div class="category-bar">
+          <button class="category-item">
+            <i class="fas fa-camera"></i>
+            <span>Camera</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Phones</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-watch"></i>
+            <span>Smart Watches</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-laptop"></i>
+            <span>Laptops</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-gamepad"></i>
+            <span>Gaming</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-headphones-alt"></i>
+            <span>Headphones</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-tv"></i>
+            <span>Screens</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-couch"></i>
+            <span>Furniture</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-tshirt"></i>
+            <span>Fashion</span>
+          </button>
+          <button class="category-item">
+            <i class="fas fa-cookie"></i>
+            <span>Snacks</span>
+          </button>
+        </div>
+      </div>
+    
+    <div class="voucher-container" [style.backgroundImage]="'url(' + images[currentImageIndex] + ')'">
+    <div class="voucher-content">
+      <h2>Voucher up to <br> 50%
+        Off
+      </h2>
+      <div class="timer">{{ timer }}</div>
+    </div>
+    </div>
+</div>
+
+
+
+
+  
+  

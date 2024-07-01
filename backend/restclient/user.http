@@ -1,0 +1,47 @@
+### Register a new user
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "email": "testuser1@example.com",
+    "password": "Password123",
+    "name": "Test User"
+}
+
+### Register a new admin user
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "email": "adminuser1@example.com",
+    "password": "AdminPassword123",
+    "name": "Admin User",
+    "role": "ADMIN"
+}
+
+### Login
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "testuser1@example.com",
+    "password": "Password123"
+}
+
+### Login as admin
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "adminuser1@example.com",
+    "password": "AdminPassword123"
+}
+
+### Reset Password
+POST http://localhost:3000/users/reset-password
+Content-Type: application/json
+
+{
+    "email": "testuser@example.com",
+    "newPassword": "NewPassword123"
+}
