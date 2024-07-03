@@ -1,0 +1,128 @@
+.buy-now-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all children horizontally */
+  }
+  
+  .categories-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center the categories within the row */
+  }
+  
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Set width for the square */
+    height: 80px; /* Set height for the square */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .category-item:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+  }
+  
+  .category-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the products within the container */
+  }
+  
+  .product-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-item img {
+    max-width: 50px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .product-item h3 {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .product-item p {
+    font-size: 0.7em;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .product-item .price {
+    font-size: 0.9em;
+    color: #E83544;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .product-item .stock {
+    font-size: 0.7em;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .product-item .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .product-item .actions button {
+    background: #E83544;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .product-item .actions button:hover {
+    background: #a6002b;
+  }
+
+  .view-button {
+    background: #E83544;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .view-button:hover {
+    background: #a6002b;
+  }
+  

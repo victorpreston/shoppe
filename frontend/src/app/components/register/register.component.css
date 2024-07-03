@@ -11,24 +11,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    padding-top: 20px;
   }
   
  
   .container {
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 350px;
     width: 100%;
-  }
-  
- 
-  h3 {
-    margin-top: 0;
-    text-align: center;
-    color: #333;
   }
   
 
@@ -39,9 +33,10 @@ body {
   
  
   .anchor {
-    color: #C80036;
+    color: #E83544;
     text-decoration: none;
     cursor: pointer;
+    padding-top: 0%;
   }
   
   .anchor:hover {
@@ -65,14 +60,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 12px;
   }
   
  
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="password"]:focus {
-    border-color: #C80036;
+    border-color: #E83544;
     outline: none;
   }
   
@@ -86,7 +81,7 @@ body {
   button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #C80036;
+    background-color: #E83544;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -100,3 +95,25 @@ body {
     background-color: #a6002b;
   }
   
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .home-link{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .home-link .back-icon {
+    margin-right: 5px;
+    color: #E83544;
+  }
+
+  .back-icon {
+    font-size: 16px;
+    color: #E83544;
+  }
