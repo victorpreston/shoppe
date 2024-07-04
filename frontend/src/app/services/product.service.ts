@@ -8,7 +8,7 @@ import { Product } from '../interfaces/product';
 })
 export class ProductService {
   private apiUrl = 'http://localhost:3000/products';
-  private selectedProduct: Product | null = null; // Add this line
+  private selectedProduct: Product | null = null;
 
 
   constructor(private http: HttpClient) { }
@@ -21,11 +21,11 @@ export class ProductService {
     return this.http.get<Product>(url);
   }
 
-  setSelectedProduct(product: Product) { // Add this method
+  setSelectedProduct(product: Product) { 
     this.selectedProduct = product;
   }
 
-  getSelectedProduct(): Product | null { // Add this method
+  getSelectedProduct(): Product | null {
     return this.selectedProduct;
   }
 }

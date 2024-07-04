@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CartService {
-  private apiUrl = 'http://localhost:3000/cart'; // Update with your actual API URL
+  private apiUrl = 'http://localhost:3000/cart';
   private cartItemCount = new BehaviorSubject<number>(0);
 
   constructor(private http: HttpClient) {}
