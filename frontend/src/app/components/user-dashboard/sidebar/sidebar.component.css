@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   width: 200px;
-  background-color: #f8f9fa;
+  background-color: #dbdbdb;
   padding: 20px;
   margin-top: 5px; /* Adjust as needed for spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
   border-radius: 8px; /* Optional: add rounded corners */
-  height: 90vh;
+  height: 100vh;
 }
 
 .logo {
@@ -69,4 +69,10 @@
   padding: 2px 8px;
   font-size: 12px;
   margin-left: 5px;
+}
+
+.sidebar-bottom{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 20rem;
 }

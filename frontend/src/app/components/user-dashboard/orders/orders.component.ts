@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../../services/order.service';
 import { CommonModule } from '@angular/common';
 import { NotificationComponent } from '../../notification/notification.component';
+import { ConfirmationDialogComponent } from '../../confirmation-dialog/confirmation-dialog.component'; // Import the new component
 
 interface Order {
   id: number;
@@ -15,12 +16,13 @@ interface Order {
   standalone: true,
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.css'],
-  imports: [CommonModule, NotificationComponent]
+  imports: [CommonModule, NotificationComponent, ConfirmationDialogComponent] // Add the new component to imports
 })
 export class OrdersComponent implements OnInit {
   orders: Order[] = [];
   notificationMessage: string | null = null;
   notificationType: 'success' | 'error' = 'success';
+  orderToCancel: number | null = null; // Track the order to cancel
 
   constructor(private orderService: OrderService) {}
 
@@ -35,21 +37,31 @@ export class OrdersComponent implements OnInit {
     });
   }
 
-  cancelOrder(orderId: number) {
-    if (confirm('Are you sure you want to cancel this order?')) {
-      this.orderService.cancelOrder(orderId).subscribe({
+  confirmCancelOrder(orderId: number) {
+    this.orderToCancel = orderId;
+  }
+
+  onConfirm() {
+    if (this.orderToCancel !== null) {
+      this.orderService.cancelOrder(this.orderToCancel).subscribe({
         next: () => {
-          this.orders = this.orders.filter(order => order.id !== orderId);
+          this.orders = this.orders.filter(order => order.id !== this.orderToCancel);
           this.notificationMessage = 'Order cancelled successfully';
           this.notificationType = 'success';
+          this.orderToCancel = null;
         },
         error: (error) => {
           console.error('Error cancelling order:', error);
           this.notificationMessage = 'Error cancelling order';
           this.notificationType = 'error';
+          this.orderToCancel = null;
         }
       });
     }
+  }
+
+  onCancel() {
+    this.orderToCancel = null;
   }
 
   closeNotification() {

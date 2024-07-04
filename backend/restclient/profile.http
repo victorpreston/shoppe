@@ -1,0 +1,20 @@
+# Login request to get the token
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "email": "Victor.Preston@teach2give.com",
+  "password": "jay@2019PT"
+}
+
+###
+
+# Update password request
+POST http://localhost:3000/profile/password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsImVtYWlsIjoiVmljdG9yLlByZXN0b25AdGVhY2gyZ2l2ZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcyMDA0NzUxNCwiZXhwIjoxNzIwMDUxMTE0fQ.Q8uLZCWVnhtXKwBBvRvzH7nXSj3BGKkcTPE_gc4Kd_k
+
+{
+  "currentPassword": "jay@2019PT",
+  "newPassword": "jay@2019pt"
+}

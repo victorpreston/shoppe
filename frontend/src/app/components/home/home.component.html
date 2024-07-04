@@ -1,20 +1,6 @@
-<app-navbar></app-navbar>
-<div *ngIf="isLoading" class="loading-spinner">Loading...</div> <!-- Add this line -->
-<!-- <div class="hero-overlay" *ngIf="showOverlay">
-  <div class="hero-content">
-      <fa-icon class="close-overlay" [icon]="faTimes" (click)="closeOverlay()"></fa-icon>
-      <div class="hero-left">
-          <img src="../assets/banner1.gif" alt="Sale Banner">
-      </div>
-      <div class="hero-right">
-          <h1>{{ hero.title }}</h1>
-          <p>{{ hero.subtitle }}</p>
-          <a routerLink="/">
-            <button>Start Shopping</button>
-          </a>
-      </div>
-  </div>
-</div> -->
+<!-- <app-navbar></app-navbar>
+<div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+
 <div class="main-content">
     <div class="sidebar">
         <div class="sidebar-search-container">
@@ -60,7 +46,6 @@
           <img [src]="product.image" alt="{{ product.name }}">
           <h3>{{ product.name }}</h3>
           <p>{{ product.description }}</p>
-          <!-- <p>Ksh: {{ product.categoryId }}</p> -->
           <p class="price">Ksh: {{ product.price }}</p>
           <div class="stock-container">
             <span class="stock-item">+{{ product.stockQuantity }} More</span>
@@ -73,4 +58,4 @@
       </div>
     <mat-paginator [length]="filteredProducts.length" [pageSize]="pageSize" [pageSizeOptions]="[12, 24, 36]" (page)="onPageChange($event)" hidePageSize="true">
     </mat-paginator>
-</div>
+</div> -->

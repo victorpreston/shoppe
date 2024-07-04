@@ -8,4 +8,7 @@ export interface Product {
     categoryId: number;
     createdAt: Date;
     updatedAt: Date;
+
+    oldPrice?: number;
+    discount?: number;
 }

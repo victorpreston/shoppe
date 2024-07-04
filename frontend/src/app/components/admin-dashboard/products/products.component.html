@@ -1,0 +1,82 @@
+<div class="product-component">
+    <div class="product-actions">
+      <button (click)="onAddProduct()"><fa-icon [icon]="faPlus"></fa-icon> Add Product</button>
+      <div class="search-container">
+        <input type="text" [(ngModel)]="searchTerm" (input)="onSearch()" placeholder="Search products..." class="search-input">
+      </div>
+      <select [(ngModel)]="selectedCategoryId" (change)="onFilterByCategory()" class="category-dropdown">
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+    </div>
+  
+    <div *ngIf="paginatedProducts.length > 0; else emptyProducts">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of paginatedProducts; let i = index">
+            <td>{{ i + 1 + currentPage * itemsPerPage }}</td>
+            <td><img [src]="product.image" alt="{{ product.name }}" class="product-image"></td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>Ksh: {{ product.price }}</td>
+            <td>{{ product.stockQuantity }}</td>
+            <td>
+              <fa-icon [icon]="faEdit" class="edit-icon" (click)="onEditProduct(product)"></fa-icon>
+              <fa-icon [icon]="faTrash" class="delete-icon" (click)="onDeleteProduct(product.id)"></fa-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <app-notification *ngIf="notificationMessage" [message]="notificationMessage" [type]="notificationType" (close)="closeNotification()"></app-notification>
+      <app-confirm-alert *ngIf="showConfirmDelete" [message]="confirmMessage" (confirm)="confirmDeleteProduct()" (cancel)="cancelDelete()"></app-confirm-alert>
+      <mat-paginator [length]="totalItems" [pageSize]="itemsPerPage" (page)="onPageChange($event)" [pageSizeOptions]="[4, 8, 24]"></mat-paginator>
+    </div>
+    <ng-template #emptyProducts>
+      <div class="empty-products-container">
+        <p class="no-products-message">No products found</p>
+      </div>
+    </ng-template>
+  
+    <div class="product-form-container" [ngClass]="{'show': showForm}">
+      <form [formGroup]="productForm" (ngSubmit)="onSaveProduct()" class="product-form">
+        <fa-icon [icon]="faTimes" class="close-icon" (click)="onCancel()"></fa-icon>
+        <h2>{{ editMode ? 'Edit Product' : 'Add Product' }}</h2>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" type="text">
+  
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description"></textarea>
+  
+        <label for="price">Price</label>
+        <input id="price" formControlName="price" type="number">
+  
+        <label for="stockQuantity">Stock Quantity</label>
+        <input id="stockQuantity" formControlName="stockQuantity" type="number">
+  
+        <label for="categoryId">Category</label>
+        <select id="categoryId" formControlName="categoryId">
+          <option *ngFor="let category of categories" [value]="category.id | number">{{ category.name }}</option>
+        </select>
+  
+        <label for="image">Image</label>
+        <input id="image" type="file" (change)="onFileChange($event)">
+        <span *ngIf="isLoading">Uploading...</span>
+  
+        <div class="form-actions">
+          <button type="submit">{{ editMode ? 'Update Product' : 'Create Product' }}</button>
+          <button type="button" class="cancel-button" (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>  

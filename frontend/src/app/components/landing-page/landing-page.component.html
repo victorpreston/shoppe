@@ -1,0 +1,171 @@
+<!-- Product Slider Section -->
+ <app-navbar></app-navbar>
+<div class="slider">
+    <div class="sliderWrapper">
+      <div class="sliderItem">
+        <img src="../assets/jordan.png" class="sliderImg" />
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">
+          JORDAN<br />
+          NEW<br />
+          SEASON
+        </h1>
+        <h2 class="sliderPrice">$199</h2>
+        <a href="/login">
+        <button class="buyButton">BUY NOW</button>
+      </a>
+      </div>
+      <div class="sliderItem">
+        <img src="../assets/blazer.png" class="sliderImg" />
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">
+          BLAZER<br />
+          NEW<br />
+          SEASON
+        </h1>
+        <h2 class="sliderPrice">$129</h2>
+        <button class="buyButton">BUY NOW</button>
+      </div>
+      <div class="sliderItem">
+        <img src="../assets/crater.png" class="sliderImg" />
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">
+          CRATER<br />
+          NEW<br />
+          SEASON
+        </h1>
+        <h2 class="sliderPrice">$139</h2>
+        <button class="buyButton">BUY NOW</button>
+      </div>
+      <div class="sliderItem">
+        <img src="../assets/hippie.png" class="sliderImg" />
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">
+          HIPPIE<br />
+          NEW<br />
+          SEASON
+        </h1>
+        <h2 class="sliderPrice">$149</h2>
+        <button class="buyButton">BUY NOW</button>
+      </div>
+      <div class="sliderItem">
+        <img src="../assets/air2.png" class="sliderImg" />
+        <div class="sliderBg"></div>
+        <h1 class="sliderTitle">
+          FORCE<br />
+          NEW<br />
+          SEASON
+        </h1>
+        <h2 class="sliderPrice">$119</h2>
+        <button class="buyButton">BUY NOW</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Features Section -->
+  <div class="features">
+    <div class="feature">
+      <img src="https://www.svgrepo.com/show/301732/free-delivery-free.svg" class="featureIcon" />
+      <span class="featureTitle">FREE SHIPPING</span>
+      <span class="featureDesc">Free worldwide shipping on all orders</span>
+    </div>
+    <div class="feature">
+      <img src="https://images.kkeu.de/is/image/BEG/KK_global_30_Tage_Rueckgabe?$2-3-4-col-wt$&fmt=png-alpha&clipPathE=Freisteller" class="featureIcon" />
+      <span class="featureTitle">30 DAYS RETURN</span>
+      <span class="featureDesc">Easy Return and Refund in 14 days</span>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/2611/2611152.png" class="featureIcon" />
+      <span class="featureTitle">GIFT CARD</span>
+      <span class="featureDesc">Buy Gift Cards and use Coupon Codes easily</span>
+    </div>
+    <div class="feature">
+      <img src="https://www.svgrepo.com/show/110408/send-message.svg" class="featureIcon" />
+      <span class="featureTitle">CONTACT US</span>
+      <span class="featureDesc">Keep in touch via email and ticket system</span>
+    </div>
+  </div>
+  <div class="gallery">
+    <div class="galleryItem">
+      <img src="https://st4.depositphotos.com/1023934/37752/i/450/depositphotos_377527168-stock-photo-interior-design-modern-living-room.jpg" class="galleryImg" />
+      <h1 class="galleryTitle">Get The Best Furniture</h1>
+    </div>
+    <div class="galleryItem">
+      <img src="https://img.pixelz.com/blog/use-smartphone-to-capture-high-quality-product-images/iphone-product-photography-studio-setup-2.jpg" class="galleryImg" />
+      <h1 class="galleryTitle">Get the best phones and Electronics</h1>
+    </div>
+    <div class="galleryItem">
+      <img src="https://media.istockphoto.com/id/1281687635/photo/collection-clothes-hanging-on-a-clothing-rack.jpg?s=612x612&w=0&k=20&c=RbGdIYuL3a7Xx_plwxRx8k64KRpFrbSXJThbCqBKvJo=" class="galleryImg" />
+      <h1 class="galleryTitle">And We also have the best clothing just for you</h1>
+    </div>
+  </div>
+  
+  <!-- New Season Section  -->
+  <div class="products">
+    <div *ngFor="let product of filteredProducts" class="product-item">
+      <img [src]="product.image" alt="{{ product.name }}">
+      <div class="product-content">
+        <h3>{{ product.name }}</h3>
+        <p class="price">Ksh. {{ product.price }}</p>
+        <div class="stock-container">
+          <span class="stock-item">+{{ product.stockQuantity }} More</span>
+          <div class="ratings">
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="view-button">View</button>
+        <!-- <fa-icon [icon]="faShoppingBag" class="action-icon" routerLink="/login"></fa-icon> -->
+      </div>
+    </div>
+  </div>
+  <!-- Footer Section  -->
+  <footer>
+    <!-- Footer Left  -->
+    <div class="footerLeft">
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">About Us</h1>
+        <ul class="fList">
+          <li class="fListItem">Stores</li>
+          <li class="fListItem">Company</li>
+          <li class="fListItem">Contact</li>
+          <li class="fListItem">Careers</li>
+          <li class="fListItem">Affiliates</li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Useful Links</h1>
+        <ul class="fList">
+          <li class="fListItem">FAQ's</li>
+          <li class="fListItem">Refund</li>
+          <li class="fListItem">Stories</li>
+          <li class="fListItem">Support</li>
+          <li class="fListItem">Feedback</li>
+        </ul>
+      </div>
+      <div class="footerMenu">
+        <h1 class="fMenuTitle">Products</h1>
+        <ul class="fList">
+          <li class="fListItem">Men's Fashion</li>
+          <li class="fListItem">Electronics</li>
+          <li class="fListItem">Furniture</li>
+          <li class="fListItem">Cameras</li>
+          <li class="fListItem">Headpones</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Footer Right  -->
+    <div class="footerRight">
+      <div class="footerRightMenu">
+        <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+        <div class="fMail">
+          <input type="text" placeholder="email@shoppie.com" class="fInput" />
+          <a routerLink="">
+          <button class="fButton">Join Now</button>
+        </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>  

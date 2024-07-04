@@ -25,6 +25,6 @@ export class NavbarComponent {
   }
 
   handleSearch() {
-    this.searchService.changeSearchTerm(this.searchTerm);
+    this.searchService.setSearchTerm(this.searchTerm);
   }
 }

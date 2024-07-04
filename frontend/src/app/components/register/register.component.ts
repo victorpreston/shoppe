@@ -12,7 +12,7 @@ import { NotificationComponent } from '../notification/notification.component';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink, NavbarComponent, FontAwesomeModule, NotificationComponent],
+  imports: [FormsModule, CommonModule, RouterLink, NavbarComponent, FontAwesomeModule, NotificationComponent, NavbarComponent],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })

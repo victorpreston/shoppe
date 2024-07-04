@@ -41,7 +41,7 @@ model Product {
   name          String
   description   String
   price         Float
-  image         String // image upload to cloudinary
+  image         String
   stockQuantity Int       @default(0)
   categoryId    Int
   category      Category  @relation(fields: [categoryId], references: [id])

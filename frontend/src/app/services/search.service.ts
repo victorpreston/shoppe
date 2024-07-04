@@ -1,3 +1,4 @@
+// search.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -5,10 +6,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SearchService {
-  private searchTermSource = new BehaviorSubject<string>('');
-  currentSearchTerm = this.searchTermSource.asObservable();
+  private searchTerm = new BehaviorSubject<string>('');
+  
+  setSearchTerm(term: string) {
+    this.searchTerm.next(term);
+  }
 
-  changeSearchTerm(term: string) {
-    this.searchTermSource.next(term);
+  getSearchTerm() {
+    return this.searchTerm.asObservable();
   }
 }

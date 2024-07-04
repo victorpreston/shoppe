@@ -1,7 +1,7 @@
 ### Add product to cart (requires User token)
 POST http://localhost:3000/cart
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ0ZXN0dXNlcjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTc1MjYxMSwiZXhwIjoxNzE5NzU2MjExfQ.p5iGR8Yl8jXOj4sHRmoQYNyIAuar6WApL8ACZdPTPUg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsImVtYWlsIjoiVmljdG9yLlByZXN0b25AdGVhY2gyZ2l2ZS5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxOTk5NzIxMCwiZXhwIjoxNzIwMDAwODEwfQ.1OWhHgrq87s56YDhVcGl8nCxkTzPJdYF67WXXIkPGuw
 
 {
     "productId": 5,

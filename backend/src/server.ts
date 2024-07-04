@@ -1,11 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors"; /**Import the cors package */
+import cors from "cors";
 import userRoutes from "./routes/user.routes";
 import productRoutes from "./routes/product.routes";
 import cartRoutes from "./routes/cart.routes";
 import orderRoutes from "./routes/order.routes";
 import categoryRoutes from "./routes/category.routes";
+import profileRoutes from "./routes/profile.routes";
+import adminUserRoutes from "./routes/admin-user.routes";
 
 dotenv.config();
 
@@ -38,6 +40,9 @@ app.use("/products", productRoutes);
 app.use("/cart", cartRoutes);
 app.use("/orders", orderRoutes);
 app.use("/categories", categoryRoutes);
+app.use('/profile', profileRoutes);
+app.use("/admin/users", adminUserRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("Shoppie API is running");

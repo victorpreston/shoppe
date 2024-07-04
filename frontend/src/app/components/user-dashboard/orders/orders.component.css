@@ -11,7 +11,7 @@
 }
 
 .orders-table th {
-  background-color: #E83544; /* Header row background color */
+  background-color: #333; /* Header row background color */
   color: #fff; /* Header text color */
   text-transform: uppercase;
   letter-spacing: 1px;

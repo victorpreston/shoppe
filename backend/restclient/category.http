@@ -1,23 +1,23 @@
 ### Create a new category (requires Admin token)
 POST http://localhost:3000/categories
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5Nzc5MDg2LCJleHAiOjE3MTk3ODI2ODZ9.lT7T84AsRfoO1o5WQToTdC8e3S3F2Lsj09gKBkMke_Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5ODY5MDk2LCJleHAiOjE3MTk4NzI2OTZ9.PaxgNjGf8v7VSMzLEKBkdvTw_F0IwpPLTbXKNW_X8Mw
 Content-Type: application/json
 
 {
-  "name": "TVs"
+  "name": "Gaming"
 }
 
 ### Get all categories (requires Auth token)
 GET http://localhost:3000/categories
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5Nzc5MDg2LCJleHAiOjE3MTk3ODI2ODZ9.lT7T84AsRfoO1o5WQToTdC8e3S3F2Lsj09gKBkMke_Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5ODY5MDk2LCJleHAiOjE3MTk4NzI2OTZ9.PaxgNjGf8v7VSMzLEKBkdvTw_F0IwpPLTbXKNW_X8Mw
 
 ### Update a category (requires Admin token)
 PUT http://localhost:3000/categories/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5Nzc5MDg2LCJleHAiOjE3MTk3ODI2ODZ9.lT7T84AsRfoO1o5WQToTdC8e3S3F2Lsj09gKBkMke_Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5ODY5MDk2LCJleHAiOjE3MTk4NzI2OTZ9.PaxgNjGf8v7VSMzLEKBkdvTw_F0IwpPLTbXKNW_X8Mw
 Content-Type: application/json
 
 {
-  "name": "Updated Electronics"
+  "name": "Cameras"
 }
 
 ### Delete a category (requires Admin token)

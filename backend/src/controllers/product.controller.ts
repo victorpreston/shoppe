@@ -24,27 +24,6 @@ const createProduct = async (req: Request, res: Response) => {
   }
 };
 
-// /**
-//  * Controller to create a product with image upload
-//  * @param req 
-//  * @param res 
-//  * @returns 
-//  */
-// const createProduct = async (req: Request, res: Response) => {
-//   const { name, description, price, stockQuantity, categoryId } = req.body;
-//   const imagePath = req.file?.path;
-
-//   if (!imagePath) {
-//     return res.status(400).json({ error: "Image is required" });
-//   }
-
-//   try {
-//     const product = await addProduct(name, description, parseFloat(price), parseInt(stockQuantity, 10), categoryId, imagePath);
-//     res.status(201).json(product);
-//   } catch (error: any) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
 
 
 /**

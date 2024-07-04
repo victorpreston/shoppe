@@ -13,9 +13,18 @@ import { CartComponent } from './components/user-dashboard/cart/cart.component';
 import { ReviwedProductsComponent } from './components/user-dashboard/reviwed-products/reviwed-products.component';
 import { BuyNowComponent } from './components/user-dashboard/buy-now/buy-now.component';
 import { DetailComponent } from './components/user-dashboard/detail/detail.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { AnalyticsComponent } from './components/admin-dashboard/analytics/analytics.component';
+import { ProductsComponent } from './components/admin-dashboard/products/products.component';
+import { CategoriesComponent } from './components/admin-dashboard/categories/categories.component';
+import { UsersComponent } from './components/admin-dashboard/users/users.component';
+import { ProfileSettingsComponent } from './components/admin-dashboard/profile-settings/profile-settings.component';
+import { ReviewsComponent } from './components/admin-dashboard/reviews/reviews.component';
+import { OrderDetailsComponent } from './components/admin-dashboard/order-details/order-details.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    {path: '', component: LandingPageComponent},
+    
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'reset-password', component: ResetPasswordComponent },
@@ -26,8 +35,22 @@ export const routes: Routes = [
         { path: 'cart', component: CartComponent },
         { path: 'reviewed-products', component: ReviwedProductsComponent },
         { path: 'buy-now', component: BuyNowComponent },
-        { path: 'product/:id', component: DetailComponent }, // Ensure this points to DetailComponent
+        { path: 'product/:id', component: DetailComponent },
     ] },
-    { path: 'admin-dashboard', component: AdminDashboardComponent, canActivate: [AdminGuard] },
+    {
+        path: 'admin-dashboard',
+        component: AdminDashboardComponent,
+        canActivate: [AdminGuard],
+        children: [
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+          { path: 'dashboard', component: AnalyticsComponent },
+          { path: 'products', component: ProductsComponent },
+          { path: 'categories', component: CategoriesComponent },
+          { path: 'order-details', component: OrderDetailsComponent},
+          { path: 'users', component: UsersComponent },
+          { path: 'profile-settings', component: ProfileSettingsComponent },
+          { path: 'reviews', component: ReviewsComponent },
+        ]
+      },
     { path: '**', component: NotFoundComponent }
 ];

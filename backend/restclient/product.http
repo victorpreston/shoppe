@@ -1,15 +1,15 @@
 ### Create a new product (requires Admin token)
 POST http://localhost:3000/products
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzYxNzkxLCJleHAiOjE3MTk3NjUzOTF9.18a09lDjL6DLTMA-wPY-RwVvYbqeKNBZluTlTGw9S_o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5ODY5MDk2LCJleHAiOjE3MTk4NzI2OTZ9.PaxgNjGf8v7VSMzLEKBkdvTw_F0IwpPLTbXKNW_X8Mw
 
 {
-    "name": "Product 3 Test",
-    "description": "This is a third test product",
-    "price": 100.99,
-    "image": "http://example.com/image.jpg",
-    "stockQuantity": 30,
-    "categoryId": 1
+    "name": "P3",
+    "description": "This is category 9",
+    "price": 1000.99,
+    "image": "https://image14.photobiz.com/9488/8_20190710140611_10464503_large.jpg",
+    "stockQuantity": 4,
+    "categoryId": 9
 }
 
 ### Get all products
@@ -21,21 +21,20 @@ GET http://localhost:3000/products/5
 ### Update a product (requires Admin token)
 PUT http://localhost:3000/products/5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzQ4MTExLCJleHAiOjE3MTk3NTE3MTF9.8nMzktaB6G79yZjWm0hibcnwMEQOBGs1ldwZmB-DQGk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5OTIxNzY4LCJleHAiOjE3MTk5MjUzNjh9._W5COEdL7LkDeH1MTtKyvntiaH4mkHETrDtAcOqRt_U
 
 {
-    "id": 5,
-    "name": "Updated Product",
-    "description": "This is an updated product",
+    "name": "The New Product",
+    "description": "This is an new product",
     "price": 70.99,
     "image": "http://example.com/newimage.jpg",
-    "stockQuantity": 50,
+    "stockQuantity": 20,
     "categoryId": 1
 }
 
 ### Delete a product (requires Admin token)
-DELETE http://localhost:3000/products/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5NzQ4MTExLCJleHAiOjE3MTk3NTE3MTF9.8nMzktaB6G79yZjWm0hibcnwMEQOBGs1ldwZmB-DQGk
+DELETE http://localhost:3000/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJhZG1pbnVzZXIxQGV4YW1wbGUuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5ODgxODg3LCJleHAiOjE3MTk4ODU0ODd9.MpgNYdIRAaSCr_xP3b3kbTSBymKcx_2CUQ7wlnCaGGQ
 
 
 

@@ -13,9 +13,9 @@ POST http://localhost:3000/users/register
 Content-Type: application/json
 
 {
-    "email": "adminuser1@example.com",
-    "password": "AdminPassword123",
-    "name": "Admin User",
+    "email": "vp.prestonvictor@gmail.com",
+    "password": "jay@2019PT",
+    "name": "Admin",
     "role": "ADMIN"
 }
 
@@ -24,8 +24,8 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "testuser1@example.com",
-    "password": "Password123"
+    "email": "Victor.Preston@teach2give.com",
+    "password": "jay@2019PT"
 }
 
 ### Login as admin
